@@ -1,0 +1,20 @@
+# Twitch-to-OSC Bridge Configuration
+# Copy this file to config.yaml and edit as needed
+
+# Twitch channels to monitor (anonymous read-only mode)
+# No authentication required - uses justinfan anonymous connection
+channels:
+  - foo
+  - bar
+
+# OSC output settings
+osc:
+  # IP address to send OSC messages to
+  host: "127.0.0.1"
+
+  # UDP port for OSC messages (Max/MSP udpreceive should listen on this port)
+  port: 9000
+
+  # OSC address pattern for chat messages
+  # Messages are sent as: [address] [channel] [username] [message] [timestamp]
+  address: "/twitch/chat"
